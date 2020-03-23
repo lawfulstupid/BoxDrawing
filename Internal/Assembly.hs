@@ -56,6 +56,7 @@ atomMap = Bimap.fromList list
    where
    list = [(c, Set.singleton c) | c <- ['╴'..'╻'] ++ [double left, double up, double right, double down]]
       ++ [(c, atoms' c) | c <- "─━│┃╼╽╾╿" ++ (['┌'..'╬'] \\ "╌╍╎╏")]
+      ++ [(' ', Set.empty)]
    
    atoms' :: Char -> Set Char
    atoms' = Set.fromList . \case
