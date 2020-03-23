@@ -27,6 +27,7 @@ x & y = case (sequence $ atoms <$> [x,y]) >>= fromAtoms . Set.unions of
 
 overlay :: Char -> Char -> Char
 overlay ' ' y = y
+overlay x ' ' = x
 overlay x y = if null z
    then errInvalidChars x y
    else fromJust z
