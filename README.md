@@ -42,3 +42,6 @@ This class makes data types drawable. It has one operation: `assemble`, which is
 
 `draw :: Draw a => a -> IO ()`
 Draws a drawable object, much like a 2-dimensional version of `print`.
+
+`overlayAll`
+Performs overlay for all characters in a render.

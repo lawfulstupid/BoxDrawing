@@ -15,3 +15,6 @@ class Draw a where
 
 draw :: Draw a => a -> IO ()
 draw = putStr . unlines . assemble
+
+overlayAll :: [[Char]] -> [[Char]] -> [[Char]]
+overlayAll = zipWith $ zipWith overlay
